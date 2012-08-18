@@ -1,7 +1,13 @@
 stackable_flash
 ===============
 
-Stackable Flash overrides the :[]= method of Rails' FlashHash to make it work like Array's :&lt;&lt; method instead, and makes each flash key an array.
+Allows flashes to stack intelligently, while preserving existing behavior of Rails' FlashHash.
+
+Stackable Flash overrides the :[]= method of Rails' FlashHash with the result being that each flash key is an array.
+It is designed following the "Principle of least surprise", so in most ways the flash works as it always has.
+Only now you can push things onto the array with `:<<`, and generally interact with the flash as an array.
+In order to be as compatible as possible with existing implementations of the FlashHash on websites, `:[]=` will still
+replace the entire object at that key.
 
 ## Installation
 
