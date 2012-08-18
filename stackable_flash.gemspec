@@ -21,6 +21,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency(%q<rspec-rails>, [">= 2.11.0"])
   gem.add_development_dependency(%q<reek>, [">= 1.2.8"])
   gem.add_development_dependency(%q<roodi>, [">= 2.1.0"])
+  gem.add_development_dependency(%q<rake>, [">= 0"])
 
 end
 
