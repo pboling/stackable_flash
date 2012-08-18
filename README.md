@@ -17,6 +17,23 @@ Or install it yourself as:
 
     $ gem install stackable_flash
 
+## Config (Optional)
+
+In an environment file, or application.rb
+
+    # Here are a few ideas (Don't do them all, pick one):
+    # You can use a lambda instead of a proc
+    StackableFlash::Config.configure do
+      # Leave it as an array
+      config[:stack_with_proc] = Proc.new {|arr| arr } )
+      # Make a set of statements separated by br tags
+      config[:stack_with_proc] = Proc.new {|arr| arr.join('<br/>') } )   # THIS IS DEFAULT IF LEFT UNCONFIGURED
+      # Make a set of p tags:
+      config[:stack_with_proc] = Proc.new {|arr| arr.map! {|x| "<p>#{x}</p>"}.join } } )
+      # Make an unordered list of tags:
+      config[:stack_with_proc] = Proc.new {|arr| '<ul>' + arr.map! {|x| "<li>#{x}</li>"}.join + '</ul> } } )
+    end
+
 ## Usage
 
 When turned on all flashes can be interacted with as arrays.
@@ -59,6 +76,7 @@ There are block helpers which I am sure some enterprising individual will have a
       flash[:notice] = 'original'
       flash[:notice] << 'message'
       flash[:notice]        # => ['original','message']
+      # Uses the :stack_with_proc to transform
       flash[:notice].stack  # => '<p>original</p><p>message</p>'
     end
 
@@ -68,6 +86,7 @@ And
       flash[:notice] = 'original'
       flash[:notice] << ' message'
       flash[:notice]        # => 'original message'
+      # Uses the :stack_with_proc to transform
       flash[:notice].stack  # => NoMethodError !!!
     end
 
