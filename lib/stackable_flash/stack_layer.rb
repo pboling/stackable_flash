@@ -3,7 +3,9 @@ require "stackable_flash/flash_stack"
 module StackableFlash
   module StackLayer
     def self.included(base)
-      base.send(:alias_method_chain, "[]=", "stacking")
+      base.class_eval do
+        alias_method_chain :[]=, :stacking
+      end
     end
 
     define_method "[]_with_stacking=" do |key, value|
