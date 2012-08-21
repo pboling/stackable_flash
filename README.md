@@ -31,13 +31,13 @@ In an environment file, or application.rb
     # You can use a lambda instead of a proc
     StackableFlash::Config.configure do
       # Leave it as an array
-      config[:stack_with_proc] = Proc.new {|arr| arr } )
+      config[:stack_with_proc] = Proc.new {|arr| arr }
       # Make a set of statements separated by br tags
-      config[:stack_with_proc] = Proc.new {|arr| arr.join('<br/>') } )   # THIS IS DEFAULT IF LEFT UNCONFIGURED
+      config[:stack_with_proc] = Proc.new {|arr| arr.join('<br/>') }   # THIS IS DEFAULT IF LEFT UNCONFIGURED
       # Make a set of p tags:
-      config[:stack_with_proc] = Proc.new {|arr| arr.map! {|x| "<p>#{x}</p>"}.join } } )
+      config[:stack_with_proc] = Proc.new {|arr| arr.map! {|x| "<p>#{x}</p>"}.join }
       # Make an unordered list of tags:
-      config[:stack_with_proc] = Proc.new {|arr| '<ul>' + arr.map! {|x| "<li>#{x}</li>"}.join + '</ul> } } )
+      config[:stack_with_proc] = Proc.new {|arr| '<ul>' + arr.map! {|x| "<li>#{x}</li>"}.join + '</ul>' }
     end
 
 ## Usage
@@ -96,10 +96,21 @@ And
       flash[:notice].stack  # => NoMethodError !!!
     end
 
+## Sightings
+
+This gem is used by the cacheable_flash gem to provide stacking flashes.  You can check it out for a working example.
+
 ## Contributing
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+5. Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+6. Create new Pull Request
+
+== Copyright
+
+Licensed under the MIT License.
+
+- Copyright (c) 2012 Peter H. Boling (http://peterboling.com). See LICENSE for further details.

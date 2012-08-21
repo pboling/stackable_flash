@@ -5,7 +5,24 @@ module StackableFlash
     def self.included(base)
       base.class_eval do
         alias_method_chain :[]=, :stacking
+        alias_method_chain :[], :stacking
       end
+    end
+
+    define_method "[]_with_stacking" do |key|
+      if StackableFlash.stacking
+        #Do it in a non-stacking block so we get normal behavior from flash[:notice] calls
+        StackableFlash.not_stacked do
+          actual = send("[]_without_stacking", key)
+          if actual.nil?
+            send("[]_with_stacking=", key, StackableFlash::FlashStack.new)
+          end
+        end
+      else
+        # All StackableFlash functionality is completely bypassed
+        send("[]_without_stacking", key)
+      end
+      return send("[]_without_stacking", key)
     end
 
     define_method "[]_with_stacking=" do |key, value|
