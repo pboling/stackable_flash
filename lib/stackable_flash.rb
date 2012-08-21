@@ -1,9 +1,14 @@
+# Only support Rails 3+?
+#require 'action_dispatch'
 require "stackable_flash/version"
 require "stackable_flash/config"
 require "stackable_flash/flash_stack"
 require "stackable_flash/stack_layer"
 
 module StackableFlash
+
+  require 'stackable_flash/railtie' if defined?(Rails)
+
   class << self
     attr_accessor :stacking
   end
@@ -50,15 +55,3 @@ module StackableFlash
   end
 
 end
-
-require 'action_pack/version'
-base = begin
-  if ActionPack::VERSION::MAJOR >= 3
-    require 'action_dispatch'
-    ActionDispatch::Flash::FlashHash
-  else
-    require 'action_controller'
-    ActionController::Flash::FlashHash
-  end
-end
-base.send :include, StackableFlash::StackLayer
