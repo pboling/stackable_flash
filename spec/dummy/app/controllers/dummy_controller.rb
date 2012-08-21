@@ -1,8 +1,8 @@
 class DummyController < ApplicationController
 
   def multiple_keys
-    flash[:notice] << 'This is a Notice'
-    #flash[:errors] = 'This is an Error'
+    flash[:notice] = 'This is a Notice'
+    flash[:errors] = 'This is an Error'
     render :text => 'Foo'
   end
 

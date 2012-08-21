@@ -7,7 +7,7 @@ describe DummyController do
   it "should handle multiple keys" do
     get :multiple_keys
     controller.flash[:notice].should == ['This is a Notice']
-    #controller.flash[:errors].should == ['This is an Error']
+    controller.flash[:errors].should == ['This is an Error']
   end
 
   it "should override" do
