@@ -1,6 +1,8 @@
 module StackableFlash
   class FlashStack < Array
 
+    # TODO: Add smart filters for flashes, like 'sticky' via method_missing.
+
     # Handle the following use case:
     #   flash[:notice] = 'First Part'
     #   flash[:notice] += ' Second Part'
