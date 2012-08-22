@@ -4,6 +4,7 @@ require File.expand_path("../dummy/config/environment",  __FILE__)
 
 require 'rspec/rails'
 require 'stackable_flash'
+require 'stackable_flash/rspec_matchers'
 
 ENGINE_RAILS_ROOT=File.join(File.dirname(__FILE__), '../')
 
@@ -21,5 +22,7 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = 'random'
+
+  config.include StackableFlash::RspecMatchers
 
 end
