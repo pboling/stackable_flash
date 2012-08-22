@@ -29,9 +29,9 @@ module StackableFlash
     #cattr_reader :config
     #cattr_writer :config
 
-    self.config ||= DEFAULTS
+    @config ||= DEFAULTS
     def self.configure &block
-      yield @@config
+      yield @config
     end
 
   end
