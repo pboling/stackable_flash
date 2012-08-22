@@ -3,7 +3,7 @@ stackable_flash
 
 Allows flashes to stack intelligently, while preserving existing behavior of Rails' FlashHash.
 
-Stackable Flash overrides the :[]= method of Rails' FlashHash with the result being that each flash key is an array.
+Stackable Flash overrides the `:[]=` method of Rails' FlashHash with the result being that each flash key is an array.
 It is designed following the "Principle of least surprise", so in most ways the flash works as it always has.
 Only now you can push things onto the array with `:<<`, and generally interact with the flash as an array.
 In order to be as compatible as possible with existing implementations of the FlashHash on websites, `:[]=` will still
@@ -109,8 +109,8 @@ This gem is used by the cacheable_flash gem to provide stacking flashes.  You ca
 5. Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 6. Create new Pull Request
 
-== Copyright
+## Copyright
 
 Licensed under the MIT License.
 
-- Copyright (c) 2012 Peter H. Boling (http://peterboling.com). See LICENSE for further details.
+* Copyright (c) 2012 Peter H. Boling (http://peterboling.com). See LICENSE for further details.
