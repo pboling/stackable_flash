@@ -109,8 +109,8 @@ This gem is used by the cacheable_flash gem to provide stacking flashes.  You ca
 5. Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 6. Create new Pull Request
 
-== Copyright
+## Copyright
 
 Licensed under the MIT License.
 
-- Copyright (c) 2012 Peter H. Boling (http://peterboling.com). See LICENSE for further details.
+* Copyright (c) 2012 Peter H. Boling (http://peterboling.com). See LICENSE for further details.
