@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe StackableFlash::StackLayer do
+describe StackableFlash::RspecMatchers do
   before(:each) do
     @flash = ActionDispatch::Flash::FlashHash.new
   end
