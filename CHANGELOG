@@ -1,3 +1,6 @@
+Version 0.0.7 - AUG.22.2012
+- Working Config class
+
 Version 0.0.6 - AUG.22.2012
 - Performance - reduce number of calls made in the StackLayer
 - Added support for hashes, nils, and other object that Array() destroyed (no longer uses Array())
