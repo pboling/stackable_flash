@@ -1,3 +1,8 @@
+Version 0.0.6 - AUG.22.2012
+- Performance - reduce number of calls made in the StackLayer
+- Added support for hashes, nils, and other object that Array() destroyed (no longer uses Array())
+- Expanded spec suite
+
 Version 0.0.5 - AUG.22.2012
 - Added Rspec Matchers and Test::Unit helpers.
 
