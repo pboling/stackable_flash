@@ -6,19 +6,27 @@ describe StackableFlash::RspecMatchers do
   end
   describe "tests against strange things" do
     context "should" do
-      it "should be able to test against odd values like an Object.new" do
-        lambda {@flash[:notice].should have_stackable_flash(Object.new)}.should raise_error RSpec::Expectations::ExpectationNotMetError
-      end
-      it "should be able to test against odd values like {:hello => 'asdf'}" do
+      it "should raise error when not a match" do
+        lambda {@flash[:notice].should have_stackable_flash(1)}.should raise_error RSpec::Expectations::ExpectationNotMetError
         lambda {@flash[:notice].should have_stackable_flash({:hello => 'asdf'})}.should raise_error RSpec::Expectations::ExpectationNotMetError
+      end
+      it "should not raise an error when a match" do
+        lambda { @flash[:notice] = 1
+          @flash[:notice].should have_stackable_flash(1)}.should_not raise_exception
+        lambda { @flash[:notice] = {:hello => 'asdf'}
+          @flash[:notice].should have_stackable_flash({:hello => 'asdf'})}.should_not raise_exception
       end
     end
     context "should_not" do
-      it "should be able to test against odd values like an Object.new" do
-        lambda {@flash[:notice].should_not have_stackable_flash(Object.new)}.should_not raise_exception
-      end
-      it "should be able to test against odd values like {:hello => 'asdf'}" do
+      it "should raise error when not a match" do
+        lambda {@flash[:notice].should_not have_stackable_flash(1)}.should_not raise_exception
         lambda {@flash[:notice].should_not have_stackable_flash({:hello => 'asdf'})}.should_not raise_exception
+      end
+      it "should not raise an error when a match" do
+        lambda { @flash[:notice] = 1
+          @flash[:notice].should_not have_stackable_flash(1)}.should raise_error RSpec::Expectations::ExpectationNotMetError
+        lambda { @flash[:notice] = {:hello => 'asdf'}
+          @flash[:notice].should_not have_stackable_flash({:hello => 'asdf'})}.should raise_error RSpec::Expectations::ExpectationNotMetError
       end
     end
   end
