@@ -1,3 +1,13 @@
+Version 0.0.5 - AUG.22.2012
+- Added Rspec Matchers and Test::Unit helpers.
+
+Version 0.0.4 - AUG.21.2012
+- Refactoring
+- Added ability to cold boot a flash so you can call flash[:notice] << 'Hello' without initializing it first
+
+Version 0.0.3 - AUG.20.2012
+- Switch to proper Railtie
+
 Version 0.0.2 - AUG.18.2012
 - Added rake dependency
 - Expanded README
