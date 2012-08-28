@@ -1,6 +1,7 @@
 module StackableFlash
   module TestHelpers
 
+    # slash is shorthand for stackable_flash
     def flash_in_stack(slash_for_status, expecting)
       return true if slash_for_status == expecting
       if slash_for_status.kind_of?(Array)

@@ -25,4 +25,8 @@ RSpec.configure do |config|
 
   config.include StackableFlash::RspecMatchers
 
+  config.after(:each) do
+    StackableFlash.stacking = true
+  end
+
 end

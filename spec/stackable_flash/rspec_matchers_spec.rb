@@ -173,9 +173,6 @@ describe StackableFlash::RspecMatchers do
   end
 
   describe "mixed use" do
-    after(:each) do
-      StackableFlash.stacking = true
-    end
     context "when StackableFlash is turned off and on" do
       it "should not fail for strings" do
         StackableFlash.stacking = false

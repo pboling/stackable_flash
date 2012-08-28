@@ -91,9 +91,6 @@ describe StackableFlash::StackLayer do
   end
 
   describe "mixed use" do
-    after(:each) do
-      StackableFlash.stacking = true
-    end
     it "should not fail when StackableFlash is turned off and on, unless calling #stack" do
       StackableFlash.stacking = false
       @flash[:notice] = 'original'

@@ -16,12 +16,22 @@ module StackableFlash
 
   # Regardless of the value of StackableFlash.stacking you can do a local override to force stacking.
   #
-  # StackableFlash.stacked do
-  #   flash[:notice] = 'a simple string'  # Use flash as if this gem did not exist
-  #   flash[:notice] = 'another'          # will stack the strings
-  #   flash[:notice] # => ['a simple string','another'],
-  #                  #    but returned as "a simple string<br/>another" with default config
-  # end
+  #  StackableFlash.stacked do
+  #     flash[:notice] = 'a simple string'  # You can continue to use flash as if this gem did not exist
+  #     flash[:notice] << 'another'         # will stack the strings
+  #     flash[:notice]                      # => ['a simple string','another'],
+  #     # Uses the default :stack_with_proc to transform
+  #     flash[:notice].stack                # => "a simple string<br/>another" (default config uses <br/>),
+  #     flash[:notice] = ''                 # will overwrite everything above, and set back to empty string
+  #  end
+  #
+  #  StackableFlash.stacked({:stack_with_proc => Proc.new {|arr| arr.map! {|x| "<p>#{x}</p>"}.join } } ) do
+  #    flash[:error] = 'original'
+  #    flash[:error] << 'message'
+  #    flash[:error]        # => ['original','message']
+  #    # Uses the custom :stack_with_proc above to transform
+  #    flash[:error].stack  # => '<p>original</p><p>message</p>'
+  #  end
   #
   def self.stacked(config_options = {}, &block)
     flashing({:forcing => true}) do
@@ -35,9 +45,11 @@ module StackableFlash
   # Regardless of the value of StackableFlash.stacking you can do a local override to force non-stacking.
   #
   # StackableFlash.not_stacked do
-  #   flash[:notice] = 'a simple string'  # Use flash as if this gem did not exist
-  #   flash[:notice] = ''                 # will overwrite the string above
-  #   flash[:notice] # => ''
+  #   flash[:notice] = 'a simple string'  # You can continue to use flash as if this gem did not exist
+  #   flash[:notice] << 'another'         # will concatenate the strings
+  #   flash[:notice]                      # => "a simple stringanother"
+  #   flash[:notice].stack                # => "a simple stringanother"
+  #   flash[:notice] = ''                 # will overwrite everything above, and set back to empty string
   # end
   #
   def self.not_stacked &block

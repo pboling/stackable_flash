@@ -78,13 +78,21 @@ You can even start out with it off set a flash, turn it on, and add to the stack
 
 There are block helpers which I am sure some enterprising individual will have a use for:
 
-    StackableFlash.stacked({:stack_with_proc => Proc.new {|arr| arr.map! {|x| "<p>#{x}</p>"}.join } } ) do
-      flash[:notice] = 'original'
-      flash[:notice] << 'message'
-      flash[:notice]        # => ['original','message']
-      # Uses the :stack_with_proc to transform
-      flash[:notice].stack  # => '<p>original</p><p>message</p>'
-    end
+  StackableFlash.stacked do
+     flash[:notice] = 'a simple string'  # You can continue to use flash as if this gem did not exist
+     flash[:notice] << 'another'         # will stack the strings
+     flash[:notice]                      # => ['a simple string','another'],
+     # Uses the :stack_with_proc to transform
+     flash[:notice].stack                # => "a simple string<br/>another" (default config uses <br/>),
+     flash[:notice] = ''                 # will overwrite everything above, and set back to empty string
+  end
+
+  StackableFlash.stacked({:stack_with_proc => Proc.new {|arr| arr.map! {|x| "<p>#{x}</p>"}.join } } ) do
+    flash[:error] = 'original'
+    flash[:error] << 'message'
+    flash[:error]        # => ['original','message']
+    flash[:error].stack  # => '<p>original</p><p>message</p>'
+  end
 
 And
 
