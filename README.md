@@ -106,7 +106,7 @@ And
 
 ## Sightings
 
-This gem is used by the cacheable_flash gem to provide stacking flashes.  You can check it out for a working example.
+This gem is used by the [cacheable_flash](https://github.com/pboling/cacheable-flash) gem to provide stacking flashes.  You can check it out for a working example.
 
 ## Contributing
 
