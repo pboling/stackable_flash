@@ -1,4 +1,4 @@
-stackable_flash
+stackable_flash [![Build Status](https://secure.travis-ci.org/pboling/stackable_flash.png?branch=master)](https://travis-ci.org/pboling/stackable_flash)
 ===============
 
 Allows flashes to stack intelligently, while preserving existing behavior of Rails' FlashHash.
