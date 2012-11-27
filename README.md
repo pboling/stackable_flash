@@ -1,7 +1,8 @@
 stackable_flash [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/pboling/stackable_flash) [![Build Status](https://secure.travis-ci.org/pboling/stackable_flash.png?branch=master)](https://travis-ci.org/pboling/stackable_flash)
 ===============
 
-Allows flashes to stack intelligently, while following the *principle of least surprise* for existing behavior of Rails' FlashHash.
+* Allows flashes to stack intelligently like arrays.
+* Follows the *principle of least surprise* for existing behavior of Rails' FlashHash.
 
 ## Summary
 
@@ -119,7 +120,8 @@ And
 
 ## Sightings
 
-This gem is used by the [cacheable_flash](https://github.com/pboling/cacheable-flash) gem to provide stacking flashes.  You can check it out for a working example.
+This gem is used by the [cacheable_flash](https://github.com/pboling/cacheable-flash) gem to provide stacking flashes.
+You can check it out for a working example.
 
 ## Contributing
 
