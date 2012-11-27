@@ -1,7 +1,20 @@
-stackable_flash [![Build Status](https://secure.travis-ci.org/pboling/stackable_flash.png?branch=master)](https://travis-ci.org/pboling/stackable_flash)
+stackable_flash [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/pboling/stackable_flash) [![Build Status](https://secure.travis-ci.org/pboling/stackable_flash.png?branch=master)](https://travis-ci.org/pboling/stackable_flash)
 ===============
 
-Allows flashes to stack intelligently, while preserving existing behavior of Rails' FlashHash.
+Allows flashes to stack intelligently, while following the *principle of least surprise* for existing behavior of Rails' FlashHash.
+
+## Summary
+
+| Project         |  Stackable Flash  |
+|---------------- | ----------------- |
+| gem name        |  stackable_flash  |
+| license         |  MIT              |
+| homepage        |  https://github.com/pboling/stackable_flash |
+| documentation   |  http://rdoc.info/github/pboling/stackable_flash/frames |
+| CI              |  https://travis-ci.org/pboling/stackable_flash [![Build Status](https://secure.travis-ci.org/pboling/stackable_flash.png?branch=master)](https://travis-ci.org/pboling/stackable_flash) |
+| QA              |  https://codeclimate.com/github/pboling/stackable_flash [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/pboling/stackable_flash) |
+
+## Description
 
 Stackable Flash overrides the `:[]=` method of Rails' FlashHash with the result being that each flash key is an array.
 It is designed following the "Principle of least surprise", so in most ways the flash works as it always has.
