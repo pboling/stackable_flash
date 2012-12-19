@@ -1,4 +1,4 @@
-stackable_flash [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/pboling/stackable_flash) [![Build Status](https://secure.travis-ci.org/pboling/stackable_flash.png?branch=master)](https://travis-ci.org/pboling/stackable_flash)
+stackable_flash [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/pboling/stackable_flash) [![Build Status](https://secure.travis-ci.org/pboling/stackable_flash.png?branch=master)](https://travis-ci.org/pboling/stackable_flash) [![Endorse Me](http://api.coderwall.com/pboling/endorsecount.png)](http://coderwall.com/pboling)
 ===============
 
 * Allows flashes to stack intelligently like arrays.
@@ -14,6 +14,7 @@ stackable_flash [![Code Climate](https://codeclimate.com/badge.png)](https://cod
 | documentation   |  http://rdoc.info/github/pboling/stackable_flash/frames |
 | CI              |  https://travis-ci.org/pboling/stackable_flash [![Build Status](https://secure.travis-ci.org/pboling/stackable_flash.png?branch=master)](https://travis-ci.org/pboling/stackable_flash) |
 | QA              |  https://codeclimate.com/github/pboling/stackable_flash [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/pboling/stackable_flash) |
+| Author          |  [![Endorse Me](http://api.coderwall.com/pboling/endorsecount.png)](http://coderwall.com/pboling) |
 
 ## Description
 
