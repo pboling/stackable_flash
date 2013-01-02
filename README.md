@@ -1,4 +1,4 @@
-stackable_flash [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/pboling/stackable_flash) [![Build Status](https://secure.travis-ci.org/pboling/stackable_flash.png?branch=master)](https://travis-ci.org/pboling/stackable_flash) [![Endorse Me](http://api.coderwall.com/pboling/endorsecount.png)](http://coderwall.com/pboling)
+stackable_flash
 ===============
 
 * Allows flashes to stack intelligently like arrays.
@@ -137,4 +137,4 @@ You can check it out for a working example.
 
 Licensed under the MIT License.
 
-* Copyright (c) 2012 Peter H. Boling (http://peterboling.com). See LICENSE for further details.
+* Copyright (c) 2012 Peter H. Boling (http://railsbling.com). See LICENSE for further details.
