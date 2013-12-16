@@ -157,3 +157,7 @@ For example:
 Licensed under the MIT License.
 
 * Copyright (c) 2012 Peter H. Boling (http://railsbling.com). See LICENSE for further details.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/pboling/stackable_flash/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
