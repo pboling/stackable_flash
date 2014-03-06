@@ -11,7 +11,7 @@ stackable_flash
 | gem name        |  stackable_flash  |
 | license         |  MIT              |
 | homepage        |  https://github.com/pboling/stackable_flash |
-| documentation   |  http://rdoc.info/github/pboling/stackable_flash/frames |
+| documentation   |  http://rdoc.info/github/pboling/stackable_flash/frames [![Inline docs](http://inch-pages.github.io/github/pboling/stackable_flash.png)](http://inch-pages.github.io/github/pboling/stackable_flash) |
 | CI              |  https://travis-ci.org/pboling/stackable_flash [![Build Status](https://secure.travis-ci.org/pboling/stackable_flash.png?branch=master)](https://travis-ci.org/pboling/stackable_flash) |
 | QA              |  https://codeclimate.com/github/pboling/stackable_flash [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/pboling/stackable_flash) |
 | Author          |  [Peter Boling](http://railsbling.com) [![Endorse Me](http://api.coderwall.com/pboling/endorsecount.png)](http://coderwall.com/pboling) |
