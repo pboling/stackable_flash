@@ -4,8 +4,6 @@ stackable_flash
 * Allows flashes to stack intelligently like arrays.
 * Follows the *principle of least surprise* for existing behavior of Rails' FlashHash.
 
-## Summary
-
 | Project                 |  StackableFlash    |
 |------------------------ | ----------------- |
 | gem name                |  stackable_flash   |
