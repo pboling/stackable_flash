@@ -6,15 +6,31 @@ stackable_flash
 
 ## Summary
 
-| Project         |  Stackable Flash  |
-|---------------- | ----------------- |
-| gem name        |  stackable_flash  |
-| license         |  MIT              |
-| homepage        |  https://github.com/pboling/stackable_flash |
-| documentation   |  http://rdoc.info/github/pboling/stackable_flash/frames [![Inline docs](http://inch-ci.org/github/pboling/stackable_flash.png)](http://inch-ci.org/github/pboling/stackable_flash) |
-| CI              |  https://travis-ci.org/pboling/stackable_flash [![Build Status](https://secure.travis-ci.org/pboling/stackable_flash.png?branch=master)](https://travis-ci.org/pboling/stackable_flash) |
-| QA              |  https://codeclimate.com/github/pboling/stackable_flash [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/pboling/stackable_flash) |
-| Author          |  [Peter Boling](http://railsbling.com) [![Endorse Me](http://api.coderwall.com/pboling/endorsecount.png)](http://coderwall.com/pboling) |
+| Project                 |  StackableFlash    |
+|------------------------ | ----------------- |
+| gem name                |  stackable_flash   |
+| license                 |  MIT              |
+| expert support          |  [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/peterboling?utm_source=github&utm_medium=button&utm_term=peterboling&utm_campaign=github) |
+| download rank               |  [![Total Downloads](https://img.shields.io/gem/rt/stackable_flash.svg)](https://rubygems.org/gems/stackable_flash) |
+| version                 |  [![Gem Version](https://badge.fury.io/rb/stackable_flash.png)](http://badge.fury.io/rb/stackable_flash) |
+| dependencies            |  [![Dependency Status](https://gemnasium.com/pboling/stackable_flash.png)](https://gemnasium.com/pboling/stackable_flash) |
+| code quality            |  [![Code Climate](https://codeclimate.com/github/pboling/stackable_flash.png)](https://codeclimate.com/github/pboling/stackable_flash) |
+| inline documenation     |  [![Inline docs](http://inch-ci.org/github/pboling/stackable_flash.png)](http://inch-ci.org/github/pboling/stackable_flash) |
+| continuous integration  |  [![Build Status](https://secure.travis-ci.org/pboling/stackable_flash.png?branch=master)](https://travis-ci.org/pboling/stackable_flash) |
+| test coverage           |  [![Coverage Status](https://coveralls.io/repos/pboling/stackable_flash/badge.png)](https://coveralls.io/r/pboling/stackable_flash) |
+| homepage                |  [on Github.com][homepage] |
+| documentation           |  [on Rdoc.info][documentation] |
+| live chat               |  [![Join the chat at https://gitter.im/pboling/stackable_flash](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pboling/stackable_flash?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) |
+| Spread ~♡ⓛⓞⓥⓔ♡~      |  [on Coderbits][coderbits], [on Coderwall][coderwall] |
+
+[semver]: http://semver.org/
+[pvc]: http://docs.rubygems.org/read/chapter/16#page74
+[railsbling]: http://www.railsbling.com
+[peterboling]: http://www.peterboling.com
+[coderbits]: https://coderbits.com/pboling
+[coderwall]: http://coderwall.com/pboling
+[documentation]: http://rdoc.info/github/pboling/stackable_flash/frames
+[homepage]: https://github.com/pboling/stackable_flash
 
 ## Description
 
@@ -157,6 +173,3 @@ For example:
 Licensed under the MIT License.
 
 * Copyright (c) 2012 Peter H. Boling (http://railsbling.com). See LICENSE for further details.
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/pboling/stackable_flash/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
