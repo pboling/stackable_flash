@@ -16,6 +16,8 @@ Gem::Specification.new do |gem|
   gem.version       = StackableFlash::VERSION
 
   # Development Dependencies
+
+  # http://guides.rubyonrails.org/upgrading_ruby_on_rails.html#ruby-versions
   if RUBY_VERSION <= '2.0' # 1.9.3-p551
     gem.add_development_dependency(%q<rails>, ['> 3', '< 4.0'])
     gem.add_development_dependency(%q<activesupport>, ['> 3', '< 4.0'])
@@ -26,6 +28,11 @@ Gem::Specification.new do |gem|
     gem.add_development_dependency(%q<activesupport>, ['> 3', '< 4.0'])
     gem.add_development_dependency(%q<rspec-rails>, ['2.11.0', '< 2.14.0'])
     gem.add_development_dependency(%q<reek>, ['>= 1.2.8', '< 4.0'])
+  elsif RUBY_VERSION <= '2.2' # 2.1.2
+    gem.add_development_dependency(%q<rails>, ['> 3', '< 4.0'])
+    gem.add_development_dependency(%q<activesupport>, ['> 3', '< 4.0'])
+    gem.add_development_dependency(%q<rspec-rails>, ['2.99'])
+    gem.add_development_dependency(%q<reek>, ['>= 4.6'])
   end
 
   gem.add_development_dependency(%q<roodi>, ['>= 2.1.0'])
