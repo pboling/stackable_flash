@@ -33,7 +33,7 @@ Gem::Specification.new do |gem|
     gem.add_development_dependency(%q<activesupport>, ['> 3', '< 4.0'])
     gem.add_development_dependency(%q<rspec-rails>, ['2.99'])
     gem.add_development_dependency(%q<reek>, ['>= 4.6'])
-  elsif RUBY_VERSION <= '2.3' # 2.2.7
+  elsif RUBY_VERSION <= '2.4' # 2.2.7 & 2.3.4
     gem.add_development_dependency(%q<rails>, ['> 3', '< 4.0'])
     gem.add_development_dependency(%q<activesupport>, ['> 3', '< 4.0'])
     gem.add_development_dependency(%q<rspec-rails>, ['2.99'])
