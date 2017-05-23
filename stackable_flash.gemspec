@@ -16,12 +16,14 @@ Gem::Specification.new do |gem|
   gem.version       = StackableFlash::VERSION
 
   # Development Dependencies
-  gem.add_development_dependency(%q<rails>, ["> 3"])
-  gem.add_development_dependency(%q<activesupport>, ["> 3"])
-  gem.add_development_dependency(%q<rspec-rails>, [">= 2.11.0"])
-  gem.add_development_dependency(%q<reek>, [">= 1.2.8"])
-  gem.add_development_dependency(%q<roodi>, [">= 2.1.0"])
-  gem.add_development_dependency(%q<rake>, [">= 0"])
+  if RUBY_VERSION <= '2.0' # 1.9.3-p551
+    gem.add_development_dependency(%q<rails>, ["> 3", "< 4.0"])
+    gem.add_development_dependency(%q<activesupport>, ["> 3", "< 4.0"])
+    gem.add_development_dependency(%q<rspec-rails>, ["2.11.0", "< 2.14.0"])
+    gem.add_development_dependency(%q<reek>, [">= 1.2.8", "< 2.0"])
+    gem.add_development_dependency(%q<roodi>, [">= 2.1.0"])
+    gem.add_development_dependency(%q<rake>, [">= 0"])
+  end
 
 end
 
