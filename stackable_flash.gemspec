@@ -34,13 +34,24 @@ Gem::Specification.new do |gem|
     gem.add_development_dependency(%q<rspec-rails>, ['2.99'])
     gem.add_development_dependency(%q<reek>, ['>= 4.6'])
   elsif RUBY_VERSION <= '2.4' # 2.2.7 & 2.3.4
+
+    # Any Rails 4 upgrades will have to be done in this Ruby version.
     gem.add_development_dependency(%q<rails>, ['> 3', '< 4.0'])
     gem.add_development_dependency(%q<activesupport>, ['> 3', '< 4.0'])
     gem.add_development_dependency(%q<rspec-rails>, ['2.99'])
     gem.add_development_dependency(%q<reek>, ['>= 4.6'])
 
     # LoadError: Ruby 2.2+ has removed test/unit from the core library. Rails requires this as a dependency. Please add test-unit gem to your Gemfile: `gem 'test-unit', '~> 3.0'` (cannot load such file -- test/unit)"
-    gem.add_development_dependency(%q<test-unit>, ['3.0'])
+    gem.add_development_dependency(%q<test-unit>, ['>= 3.2'])
+
+  elsif RUBY_VERSION <= '2.5' # 2.4.1
+    gem.add_development_dependency(%q<rails>, ['> 3', '< 4.0'])
+    gem.add_development_dependency(%q<activesupport>, ['> 3', '< 4.0'])
+    gem.add_development_dependency(%q<rspec-rails>, ['2.99'])
+    gem.add_development_dependency(%q<reek>, ['>= 4.6'])
+
+    # LoadError: Ruby 2.2+ has removed test/unit from the core library. Rails requires this as a dependency. Please add test-unit gem to your Gemfile: `gem 'test-unit', '~> 3.0'` (cannot load such file -- test/unit)"
+    gem.add_development_dependency(%q<test-unit>, ['>= 3.2'])
   end
 
   gem.add_development_dependency(%q<roodi>, ['>= 2.1.0'])
