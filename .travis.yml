@@ -9,3 +9,5 @@ rvm:
   - rbx-19mode
   - ruby-head
   - jruby-head
+
+script: bundle exec rspec
