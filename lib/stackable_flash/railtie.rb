@@ -16,7 +16,7 @@ module StackableFlash
         require 'action_controller'
         ActionController::Flash::FlashHash
       end
-      base.send :include, StackableFlash::StackLayer
+      base.send :prepend, StackableFlash::StackLayer
     end
 
   end

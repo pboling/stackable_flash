@@ -7,23 +7,26 @@ module StackableFlash
     #   flash[:notice] = 'First Part'
     #   flash[:notice] += ' Second Part'
     # => ['First Part Second Part']
-    define_method "+_with_stacking", lambda {|to_add|
+
+    def +(to_add)
       if StackableFlash.stacking
+
         if to_add.kind_of?(Array)
-          self.send("+_without_stacking", to_add)
+          super(to_add)
         else
+
           # Make sure it responds to +, otherwise just push it onto the stack
           if self.last.respond_to?(:+)
-            self[self.length -1] = self.last + to_add
+            self[self.length - 1] = self.last + to_add
           else
             self << to_add
           end
         end
+
       else
-        self.send("+_without_stacking", to_add)
+        super(to_add)
       end
-    }
-    alias_method_chain :+, :stacking
+    end
 
     def stack
       if StackableFlash.stacking
