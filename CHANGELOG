@@ -1,3 +1,7 @@
+Version 0.1.0 - MAY.23.2017
+- Remove usage of alias_method_chain
+- Dropped support for Ruby 1.9.3 (Now requires >= 2.0)
+
 Version 0.0.7 - AUG.22.2012
 - Working Config class
 

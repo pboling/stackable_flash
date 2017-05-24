@@ -15,15 +15,12 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
   gem.version       = StackableFlash::VERSION
 
+  gem.required_ruby_version = '>= 2.0'
+
   # Development Dependencies
 
   # http://guides.rubyonrails.org/upgrading_ruby_on_rails.html#ruby-versions
-  if RUBY_VERSION <= '2.0' # 1.9.3-p551
-    gem.add_development_dependency(%q<rails>, ['> 3', '< 4.0'])
-    gem.add_development_dependency(%q<activesupport>, ['> 3', '< 4.0'])
-    gem.add_development_dependency(%q<rspec-rails>, ['2.11.0', '< 2.14.0'])
-    gem.add_development_dependency(%q<reek>, ['>= 1.2.8', '< 3.0'])
-  elsif RUBY_VERSION <= '2.1' # 2.0.0-p648
+  if RUBY_VERSION <= '2.1' # 2.0.0-p648
     gem.add_development_dependency(%q<rails>, ['> 3', '< 4.0'])
     gem.add_development_dependency(%q<activesupport>, ['> 3', '< 4.0'])
     gem.add_development_dependency(%q<rspec-rails>, ['2.11.0', '< 2.14.0'])
