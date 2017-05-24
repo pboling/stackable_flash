@@ -2,27 +2,21 @@ require "stackable_flash/flash_stack"
 
 module StackableFlash
   module StackLayer
-    def self.included(base)
-      base.class_eval do
-        alias_method_chain :[]=, :stacking
-        alias_method_chain :[], :stacking
-      end
-    end
 
-    define_method "[]_with_stacking" do |key|
+    def [](key)
       if StackableFlash.stacking
         #Do it in a non-stacking block so we get normal behavior from flash[:notice] calls
         StackableFlash.not_stacked do
-          actual = send("[]_without_stacking", key)
+          actual = super(key)
           if actual.nil?
-            send("[]_with_stacking=", key, StackableFlash::FlashStack.new)
+            send(:[]=, key, StackableFlash::FlashStack.new)
           end
         end
       else
         # All StackableFlash functionality is completely bypassed
-        send("[]_without_stacking", key)
+        super(key)
       end
-      return send("[]_without_stacking", key)
+      return super(key)
     end
 
     # Make an array at the key, while providing a seamless upgrade to existing flashes
@@ -48,9 +42,9 @@ module StackableFlash
     #
     # The same line of code does all of the above.
     # Leave existing behavior in place, but send the full array as the value so it doesn't get killed.
-    define_method "[]_with_stacking=" do |key, value|
+    def []=(key, value)
       if StackableFlash.stacking
-        send("[]_without_stacking=", key,
+        super(key,
           StackableFlash::FlashStack.new.replace(
             value.kind_of?(Array) ?
               value :
@@ -60,7 +54,7 @@ module StackableFlash
         )
       else
         # All StackableFlash functionality is completely bypassed
-        send("[]_without_stacking=", key, value)
+        super(key, value)
       end
     end
 
