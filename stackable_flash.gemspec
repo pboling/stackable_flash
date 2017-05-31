@@ -35,7 +35,7 @@ Gem::Specification.new do |gem|
   elsif RUBY_VERSION <= '2.4' # 2.2.7 & 2.3.4
     # Any Rails 4 upgrades will have to be done in this Ruby version.
     gem.add_development_dependency(%q<rails>, ['> 3', '< 5.0'])
-    gem.add_development_dependency(%q<activesupport>, ['> 3', '< 4.0'])
+    gem.add_development_dependency(%q<activesupport>, ['> 3', '< 5.0'])
     gem.add_development_dependency(%q<rspec-rails>, ['2.99'])
     gem.add_development_dependency(%q<reek>, ['>= 4.6'])
 
@@ -43,7 +43,7 @@ Gem::Specification.new do |gem|
     gem.add_development_dependency(%q<test-unit>, ['>= 3.2'])
   elsif RUBY_VERSION <= '2.5' # 2.4.1
     gem.add_development_dependency(%q<rails>, ['> 4', '< 5.0'])
-    gem.add_development_dependency(%q<activesupport>, ['> 3', '< 4.0'])
+    gem.add_development_dependency(%q<activesupport>, ['> 4', '< 5.0'])
     gem.add_development_dependency(%q<rspec-rails>, ['2.99'])
     gem.add_development_dependency(%q<reek>, ['>= 4.6'])
 
@@ -51,7 +51,7 @@ Gem::Specification.new do |gem|
     gem.add_development_dependency(%q<test-unit>, ['>= 3.2'])
   elsif RUBY_VERSION > '2.5'
     gem.add_development_dependency(%q<rails>, ['> 5', '< 6.0'])
-    gem.add_development_dependency(%q<activesupport>, ['> 3', '< 4.0'])
+    gem.add_development_dependency(%q<activesupport>, ['> 5', '< 6.0'])
     gem.add_development_dependency(%q<rspec-rails>, ['2.99'])
     gem.add_development_dependency(%q<reek>, ['>= 4.6'])
 
