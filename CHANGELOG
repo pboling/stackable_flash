@@ -1,4 +1,7 @@
-Version 0.1.0 - MAY.23.2017
+Version 0.1.1 - MAY.31.2017
+- Fix deprecation warnings for Rails 5 support
+
+Version 0.1.0 - MAY.23.2017 - unreleased
 - Remove usage of alias_method_chain
 - Dropped support for Ruby 1.9.3 (Now requires >= 2.0)
 
