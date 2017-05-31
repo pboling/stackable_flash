@@ -4,12 +4,12 @@ stackable_flash
 * Allows flashes to stack intelligently like arrays.
 * Follows the *principle of least surprise* for existing behavior of Rails' FlashHash.
 
-| Project                 |  StackableFlash    |
+| Project                 |  Stackable Flash  |
 |------------------------ | ----------------- |
-| gem name                |  stackable_flash   |
-| license                 |  MIT              |
+| gem name                |  stackable_flash  |
+| license                 |  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) |
 | expert support          |  [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/peterboling?utm_source=github&utm_medium=button&utm_term=peterboling&utm_campaign=github) |
-| download rank               |  [![Total Downloads](https://img.shields.io/gem/rt/stackable_flash.svg)](https://rubygems.org/gems/stackable_flash) |
+| download rank           |  [![Total Downloads](https://img.shields.io/gem/rt/stackable_flash.svg)](https://rubygems.org/gems/stackable_flash) |
 | version                 |  [![Gem Version](https://badge.fury.io/rb/stackable_flash.png)](http://badge.fury.io/rb/stackable_flash) |
 | dependencies            |  [![Dependency Status](https://gemnasium.com/pboling/stackable_flash.png)](https://gemnasium.com/pboling/stackable_flash) |
 | code quality            |  [![Code Climate](https://codeclimate.com/github/pboling/stackable_flash.png)](https://codeclimate.com/github/pboling/stackable_flash) |
@@ -19,13 +19,12 @@ stackable_flash
 | homepage                |  [on Github.com][homepage] |
 | documentation           |  [on Rdoc.info][documentation] |
 | live chat               |  [![Join the chat at https://gitter.im/pboling/stackable_flash](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pboling/stackable_flash?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) |
-| Spread ~♡ⓛⓞⓥⓔ♡~      |  [on Coderbits][coderbits], [on Coderwall][coderwall] |
+| Spread ~♡ⓛⓞⓥⓔ♡~      |  [on Coderwall][coderwall] |
 
 [semver]: http://semver.org/
 [pvc]: http://docs.rubygems.org/read/chapter/16#page74
 [railsbling]: http://www.railsbling.com
 [peterboling]: http://www.peterboling.com
-[coderbits]: https://coderbits.com/pboling
 [coderwall]: http://coderwall.com/pboling
 [documentation]: http://rdoc.info/github/pboling/stackable_flash/frames
 [homepage]: https://github.com/pboling/stackable_flash
@@ -170,4 +169,4 @@ For example:
 
 Licensed under the MIT License.
 
-* Copyright (c) 2012 Peter H. Boling (http://railsbling.com). See LICENSE for further details.
+* Copyright (c) 2012-17 Peter H. Boling (http://railsbling.com). See LICENSE for further details.
