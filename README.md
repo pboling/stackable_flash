@@ -1,15 +1,15 @@
-= A New Hope
+# A New Hope
 
-== This gem is no longer maintained.
+## This gem is no longer maintained.
 
-== Its intended use was as part of the gem `cacheable-flash`, which is also archived and unmaintained.
+## Its intended use was as part of the gem `cacheable-flash`, which is also archived and unmaintained.
 
-= Please consider switching to https://github.com/leonid-shevtsov/unobtrusive_flash
+# Please consider switching to https://github.com/leonid-shevtsov/unobtrusive_flash
 
-== So long, and thanks for all the fish!
+## So long, and thanks for all the fish!
 
-== Copyright
+## Copyright
 
 Licensed under the MIT License. See LICENSE for further details.
 
-- Copyright (c) 2012-2017 {Peter H. Boling}[http://railsbling.com]
+- Copyright (c) 2012-2017 [Peter H. Boling][http://railsbling.com]
